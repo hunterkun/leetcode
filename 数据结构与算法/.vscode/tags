@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CommonSubsequence	../python/Dynamic_Programming.py	/^def CommonSubsequence(A, B, i, j):$/;"	kind:function	line:215
+CommonSubsequence2	../python/Dynamic_Programming.py	/^def CommonSubsequence2(A, B):$/;"	kind:function	line:227
+Dynamic_Programming.py	../python/Dynamic_Programming.py	1;"	kind:file	line:1
+INDEX_ALGO	../python/sampling.py	/^INDEX_ALGO = 1   #Direct or other$/;"	kind:variable	line:197
+INDEX_CONV	../python/sampling.py	/^INDEX_CONV = 5  #该卷积层是否采用wingord算法$/;"	kind:variable	line:201
+INDEX_DATA	../python/sampling.py	/^INDEX_DATA = 0   #参数$/;"	kind:variable	line:196
+INDEX_MAXP	../python/sampling.py	/^INDEX_MAXP = 3$/;"	kind:variable	line:199
+INDEX_SCALE	../python/sampling.py	/^INDEX_SCALE = 2  #single or multiple$/;"	kind:variable	line:198
+INDEX_TYPE	../python/sampling.py	/^INDEX_TYPE = 4  #是对activation还是param进行calibrate$/;"	kind:variable	line:200
+ans	../python/Dynamic_Programming.py	/^ans = []$/;"	kind:variable	line:245
+array.py	../python/array.py	1;"	kind:file	line:1
+binary_search	../python/Dynamic_Programming.py	/^def binary_search(nums, target):$/;"	kind:function	line:177
+binary_search.py	../python/binary_search.py	1;"	kind:file	line:1
+calibrate_activations	../python/sampling.py	/^def calibrate_activations(blobs, conv_top_blob_layer_map, conv_bottom_blob_layer_map, winograd_bottoms,$/;"	kind:function	line:325
+calibrate_max	../python/sampling.py	/^def calibrate_max(calibrator_info):$/;"	kind:function	line:226
+calibrate_min	../python/sampling.py	/^def calibrate_min(calibrator_info):$/;"	kind:function	line:202
+calibrate_parameters	../python/sampling.py	/^def calibrate_parameters(params, winograd_convolutions, calibration_algo="DIRECT", scaling_mode="SINGLE", is_wino_conv=False, maxp=0.99995):$/;"	kind:function	line:366
+calibration_algos	../python/sampling.py	/^calibration_algos = ["DIRECT", "KL", "MAXP"]$/;"	kind:variable	line:12
+coinChange	../python/Dynamic_Programming.py	/^def coinChange(coins, amount):$/;"	kind:function	line:58
+countstring	../python/Dynamic_Programming.py	/^def countstring(s):$/;"	kind:function	line:80
+dpMakeChange	../python/Dynamic_Programming.py	/^def dpMakeChange(coinValueList, change, mincoin):$/;"	kind:function	line:41
+expand_quantized_bins	../python/sampling.py	/^def expand_quantized_bins(quantized_bins, reference_bins):$/;"	kind:function	line:82
+findLength	../python/Dynamic_Programming.py	/^def findLength(A, B):$/;"	kind:function	line:204
+findMin	../python/binary_search.py	/^def findMin(nums):$/;"	kind:function	line:35
+get_blob_map	../python/sampling.py	/^def get_blob_map(test_net, enable_first_conv = False):$/;"	kind:function	line:15
+get_optimal_scaling_factor	../python/sampling.py	/^def get_optimal_scaling_factor(activation_blob, num_quantized_bins = 255):$/;"	kind:function	line:121
+get_winograd_info	../python/sampling.py	/^def get_winograd_info(model, conv_bottom_blob_layer_map, winograd_algo = False):$/;"	kind:function	line:39
+lcs	../python/Dynamic_Programming.py	/^def lcs(A, B):$/;"	kind:function	line:233
+lcs2	../python/Dynamic_Programming.py	/^def lcs2(A, B):$/;"	kind:function	line:273
+lcs3	../python/Dynamic_Programming.py	/^def lcs3(A, B):$/;"	kind:function	line:288
+lengthOfLIS	../python/Dynamic_Programming.py	/^def lengthOfLIS(nums):$/;"	kind:function	line:165
+lengthofLIS	../python/Dynamic_Programming.py	/^def lengthofLIS(nums):$/;"	kind:function	line:191
+longestPalindrome	../python/Dynamic_Programming.py	/^def longestPalindrome(s):$/;"	kind:function	line:125
+maxProduct	../python/array.py	/^def maxProduct(nums):$/;"	kind:function	line:7
+maxSubArray	../python/Dynamic_Programming.py	/^def maxSubArray(nums):$/;"	kind:function	line:105
+np_abs	../python/sampling.py	/^def np_abs(blobs):$/;"	kind:function	line:319
+pycaffe	../python/sampling.py	/^pycaffe = os.path.split(os.path.realpath(__file__))[0] + '\/..\/python'$/;"	kind:variable	line:8
+recMC	../python/Dynamic_Programming.py	/^def recMC(coinValueList, change):$/;"	kind:function	line:11
+recMc	../python/Dynamic_Programming.py	/^def recMc(coinValueList, change,table=[0]*64):$/;"	kind:function	line:23
+safe_entropy	../python/sampling.py	/^def safe_entropy(reference_distr_P, P_sum, candidate_distr_Q, Q_sum):$/;"	kind:function	line:102
+sample	../python/sampling.py	/^def sample(model, weight, winograd_algo=False, itern=1, enable_first_conv=False):$/;"	kind:function	line:52
+sampling.py	../python/sampling.py	1;"	kind:file	line:1
+scaling_modes	../python/sampling.py	/^scaling_modes = ["SINGLE", "MULTIPLE"]$/;"	kind:variable	line:13
+searchMatrix	../python/binary_search.py	/^def searchMatrix(matrix, target):$/;"	kind:function	line:9
+traceBack	../python/Dynamic_Programming.py	/^def traceBack(A, B, i, j, table, s=''):$/;"	kind:function	line:248
+wino_transform_data	../python/sampling.py	/^def wino_transform_data(blob): #B^tdB$/;"	kind:function	line:383
+wino_transform_param	../python/sampling.py	/^def wino_transform_param(blob): #GgG^t$/;"	kind:function	line:403
