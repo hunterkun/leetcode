@@ -97,6 +97,21 @@ int StrToInt(const string &str)
     return s * sign;
 }
 
+int myAtoi(string str)
+{
+    int res = 0, sign, i = str.find_first_not_of(' ');
+    if (str[i] == '+' || str[i] == '-')
+    {
+        sign = str[i++] == '+' ? 1 : -1;
+    }
+    while (isdigit(str[i]))
+    {
+        if (res > INT32_MAX / 10 || (res == INT32_MAX / 10 && str[i] - '0' > 7))
+            return sign > 0 ? INT32_MAX : INT32_MIN;
+        res += res * 10 + str[i] - '0';
+    }
+}
+
 /*
 判断字符串是否表示一个数值
 请实现一个函数用来判断字符串是否表示数值（包括整数和小数）。
@@ -159,7 +174,7 @@ bool isNumber(string s)
 //记忆化搜索
 class Solution
 {
-  private:
+private:
     vector<int> memo;
     int __FindGreatestSumOfSubArray(vector<int> array, int i)
     {
@@ -174,7 +189,7 @@ class Solution
         return res;
     }
 
-  public:
+public:
     int FindGreatestSumOfSubArray(vector<int> array)
     {
         memo = vector<int>(array.size(), -100);
@@ -185,37 +200,7 @@ class Solution
     }
 };
 
-int main()
-{
-    vector<int> arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-    int res = Solution().FindGreatestSumOfSubArray(arr);
-    cout << res << endl;
-    return 0;
-}
 
-/*
-将一组数拼接成最大数字
-排成最大数字
-排成最小数字
-给定一组非负整数，重新排列它们的顺序使之组成一个最大的整数
-*/
-bool comp(int num1, int num2)
-{
-    string s1 = to_string(num1) + to_string(num2);
-    string s2 = to_string(num2) + to_string(num1);
-    return s1 > s2;
-}
-string smallestNumber(vector<int> &nums)
-{
-    sort(nums.begin(), nums.end(), comp);
-    if (!nums.empty() && nums[0] == 0)
-        return "0";
-    string res = "";
-
-    for (int num : nums)
-        res = res + to_string(num);
-    return res;
-}
 
 //最长上升子序列
 vector<int> memo;

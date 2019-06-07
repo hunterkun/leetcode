@@ -1,4 +1,5 @@
 #coding=utf-8
+
 '''
 爬楼梯，可以跨一步或跨两步
 基本思路：第n个阶梯可以由n-1个阶梯或n-2个阶梯到达
@@ -241,37 +242,34 @@ def maxSubArray(nums):
 '''
 5. Longest Palindromic Substring
 Given a string s, find the longest palindromic substring in s.
-You may assume that the maximum length of s is 1000.
 '''
+def longestPalindrome(s):
+    n = len(s)
+    table = [[False] * n for i in range(n)]
+    ans = ''
+    maxlen = 0
+    for i in range(n):
+        table[i][i] = True
+        maxlen = 1
+        ans = s[i]
+    for i in range(n-1):
+        if s[i] == s[i + 1]:
+            table[i][i + 1] = True
+            maxlen = 2
+            ans = s[i:i + 2]
 
-
-# def longestPalindrome(s):
-#     n = len(s)
-#     table = [[False] * n for i in range(n)]
-#     ans = ''
-#     maxlen = 0
-#     for i in range(n):
-#         table[i][i] = True
-#         maxlen = 1
-#         ans = s[i]
-#     for i in range(n-1):
-#         if s[i] == s[i + 1]:
-#             table[i][i + 1] = True
-#             maxlen = 2
-#             ans = s[i:i + 2]
-
-#     for j in range(2, n):
-#         for i in range(n - j):
-#             if table[i + 1][i + j - 1] and s[i] == s[i + j]:
-#                 table[i][i + j] = True
-#                 if maxlen < j+1:
-#                     maxlen = j+1
-#                     ans = s[i:i + j + 1]
-#     return ans
-#     # for i in range(n):
-#     #     for j in range(i+1):
-#     #         if table[j][n - i - 1 + j]:
-#     #             return s[j:n - i + j]
+    for j in range(2, n):
+        for i in range(n - j):
+            if table[i + 1][i + j - 1] and s[i] == s[i + j]:
+                table[i][i + j] = True
+                if maxlen < j+1:
+                    maxlen = j+1
+                    ans = s[i:i + j + 1]
+    return ans
+    for i in range(n):
+        for j in range(i+1):
+            if table[j][n - i - 1 + j]:
+                return s[j:n - i + j]
 
 
 # '''
